@@ -88,7 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:drawableEnd="@drawable/email_icon"/>
+                android:drawableEnd="@drawable/email_icon"
+                android:background="#F8F4FC"/>
 
             <!--PADDING - ESPACIOS -->
             <View
@@ -109,7 +110,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:drawableEnd="@drawable/pass_icon"/>
+                android:drawableEnd="@drawable/pass_icon"
+                android:background="#F8F4FC"/>
 
             <!--PADDING - ESPACIOS -->
             <View
