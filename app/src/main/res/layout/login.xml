@@ -89,6 +89,8 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:hint="Introducir Email"
+                android:padding="10dp"
+
                 android:drawableEnd="@drawable/email_icon"
                 android:background="#F8F4FC"/>
 
@@ -112,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="Introducir Contraseña"
+                android:padding="10dp"
                 android:drawableEnd="@drawable/pass_icon"
                 android:background="#F8F4FC"/>
 
