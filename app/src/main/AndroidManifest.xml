@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TinderCarApp"
         tools:targetApi="31">
+
+        <!-- modificacion de layout de inicio
+         android:name=".MainActivity"-->
         <activity
-            android:name=".MainActivity"
+            android:name=".InicioActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +26,7 @@
         </activity>
 
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".SignUpActivity"/>
 
     </application>
 
