@@ -12,9 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TinderCarApp"
         tools:targetApi="31">
-
-        <!-- modificacion de layout de inicio
-         android:name=".MainActivity"-->
+        <activity
+            android:name=".CocheraBusquedaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CocherasBusqueda"
+            android:exported="false"
+            android:label="@string/title_activity_cocheras_busqueda"
+            android:theme="@style/Theme.TinderCarApp" />
+        <!--
+         modificacion de layout de inicio
+         android:name=".MainActivity"
+        -->
         <activity
             android:name=".InicioActivity"
             android:exported="true">
@@ -24,10 +33,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".SignUpActivity"/>
-
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
     </application>
 
 </manifest>
