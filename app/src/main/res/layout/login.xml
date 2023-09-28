@@ -126,12 +126,14 @@
 
             <!--BTN - INICIAR SESION -->
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/iniciarSesion"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Iniciar sesion"
                 app:cornerRadius="10dp"
                 android:textStyle="bold"
-                android:backgroundTint="@color/violeta"/>
+                android:backgroundTint="@color/violeta"
+                android:onClick="btnIniciarSesion"/>
 
             <!--PADDING - ESPACIOS -->
             <View
@@ -149,6 +151,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textColorLink="@color/white"
+                android:onClick="btnCrearCuenta"
                 />
 
             <View
