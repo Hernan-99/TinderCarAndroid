@@ -11,4 +11,6 @@ public class CocheraBusquedaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cochera_busqueda);
     }
+
+
 }
