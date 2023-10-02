@@ -140,6 +140,8 @@
                 android:layout_height="60dp"
                 android:backgroundTint="@color/violeta"
                 android:text="Crear Cuenta"
+                android:onClick="bntCrearCuenta"
+                android:id="@+id/crearCuenta"
                 android:textStyle="bold"
                 app:cornerRadius="10dp" />
 
