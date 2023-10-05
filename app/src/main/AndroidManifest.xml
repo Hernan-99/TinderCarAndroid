@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,11 +16,7 @@
         <activity
             android:name=".CocheraBusquedaActivity"
             android:exported="false" />
-        <activity
-            android:name=".CocherasBusqueda"
-            android:exported="false"
-            android:label="@string/title_activity_cocheras_busqueda"
-            android:theme="@style/Theme.TinderCarApp" />
+
         <!--
          modificacion de layout de inicio
          android:name=".MainActivity"
@@ -37,6 +34,8 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".MainActivity"/>
+
+
 
     </application>
 
