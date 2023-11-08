@@ -16,18 +16,18 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class BtnBuscarFragment extends BottomSheetDialogFragment {
+public class BottomBuscarFragment extends BottomSheetDialogFragment {
 
     private ArrayAdapter<String> adapter;
     private List<String> listaCocheras;
 
     private SearchView buscarView;
 
-    public BtnBuscarFragment() {
+    public BottomBuscarFragment() {
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState){
-        View view = inflater.inflate(R.layout.fragment_search_bottom_sheet, container, false);
+        View view = inflater.inflate(R.layout.fragment_buscar_bottom_sheet, container, false);
 
         String[] dataCocheras = {"Cochera 1", "Cochera 2", "Cochera 3"};
 
