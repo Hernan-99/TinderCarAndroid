@@ -1,4 +1,4 @@
-package com.example.tindercarapp;
+package com.example.tindercarapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tindercarapp.R;
+
 public class InicioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_inicio);
 
 
         Button btnSignUpRef = findViewById(R.id.btnSignUp);

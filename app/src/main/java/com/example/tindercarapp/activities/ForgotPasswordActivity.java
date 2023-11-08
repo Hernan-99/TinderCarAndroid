@@ -1,8 +1,10 @@
-package com.example.tindercarapp;
+package com.example.tindercarapp.activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.tindercarapp.R;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
     @Override
