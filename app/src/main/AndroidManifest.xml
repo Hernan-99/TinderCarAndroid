@@ -13,16 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TinderCarApp"
         tools:targetApi="31">
-        <activity
-            android:name=".CocheraBusquedaActivity"
-            android:exported="false" />
-
         <!--
          modificacion de layout de inicio
          android:name=".MainActivity"
         -->
         <activity
-            android:name=".InicioActivity"
+            android:name=".activities.InicioActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,9 +27,20 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity
+            android:name=".activities.PerfilActivity"
+            android:label="Perfil">
+        </activity>
+
+        <activity
+            android:name=".activities.SoporteActivity"
+            android:label="Soporte">
+        </activity>
+
+
+        <activity android:name=".activities.LoginActivity"/>
+        <activity android:name=".activities.SignUpActivity"/>
+        <activity android:name=".activities.MainActivity"/>
 
 
 
