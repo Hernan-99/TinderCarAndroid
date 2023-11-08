@@ -85,6 +85,7 @@
                 />
 
             <EditText
+                android:id="@+id/txtViewEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -110,6 +111,7 @@
                 />
 
             <EditText
+                android:id="@+id/txtViewContra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
