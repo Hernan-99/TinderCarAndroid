@@ -163,6 +163,23 @@
                 android:textStyle="bold"
                 app:cornerRadius="10dp" />
 
+            <!--PADDING - ESPACIOS -->
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/eliminarCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="#2E2E2E"
+                android:text="Eliminar cuenta"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+
         </LinearLayout>
 
     </LinearLayout>
