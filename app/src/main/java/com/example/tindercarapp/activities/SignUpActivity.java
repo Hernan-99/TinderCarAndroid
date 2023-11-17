@@ -15,16 +15,16 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
-        Button crearCuenta = findViewById(R.id.crearCuenta);
+        /*Button crearCuenta = findViewById(R.id.crearCuenta);
         crearCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 mostrarMensaje();
             }
-        });
+        });*/
 
     }
-    private void mostrarMensaje(){
+    /*private void mostrarMensaje(){
         Toast.makeText(this, "Se creó la cuenta", Toast.LENGTH_LONG).show();
-    }
+    }*/
 }

@@ -8,6 +8,9 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
 public class ValidacionInputs {
     private Context context;
     public ValidacionInputs(Context context){
@@ -15,43 +18,42 @@ public class ValidacionInputs {
     }
 
     //metodo para comprobar que el campo de email este completo
-    public boolean iptCompletado(EditText email, String msj){
-        String valor = email.getText().toString().trim();
+    public boolean iptCompletado(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String msj){
+        String valor = textInputEditText.getText().toString().trim();
         if (valor.isEmpty()){
-            email.setError(msj);
-            ocultarTeclado(email);
+            textInputLayout.setError(msj);
+            ocultarTeclado(textInputEditText);
         } else {
-            email.setError(msj);
+            textInputLayout.setErrorEnabled(false);
         }
         return true;
     }
 
     //metodo para comprobar email valido
-    public boolean iptEmailValido(EditText email, String msj){
-        String valor = email.getText().toString().trim();
+    public boolean iptEmailValido(TextInputEditText textInputEditText, TextInputLayout textInputLayout, String msj){
+        String valor = textInputEditText.getText().toString().trim();
 
         if (valor.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(valor).matches()){
-            email.setError(msj);
-            ocultarTeclado(email);
+            textInputLayout.setError(msj);
+            ocultarTeclado(textInputEditText);
             return false;
         } else {
-            email.setError(msj);
+            textInputLayout.setErrorEnabled(false);
         }
         return true;
     }
 
-        public boolean iptEmailMatches(EditText editText1, EditText editText2, String msj){
-            String valor1 = editText1.getText().toString().trim();
-            String valor2 = editText2.getText().toString().trim();
+        public boolean iptEmailMatches(TextInputEditText textInputEditText1, TextInputEditText textInputEditText2, TextInputLayout textInputLayout, String msj){
+            String valor1 = textInputEditText1.getText().toString().trim();
+            String valor2 = textInputEditText2.getText().toString().trim();
 
             if (!valor1.contentEquals(valor2)){
-                editText1.setError(msj);
-                ocultarTeclado(editText2);
+                textInputLayout.setError(msj);
+                ocultarTeclado(textInputEditText2);
                 return false;
             }
             return true;
         }
-
 
     public void ocultarTeclado(View view){
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);

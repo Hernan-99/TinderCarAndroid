@@ -6,4 +6,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_cocheras_busqueda">CocherasBusqueda</string>
+    <string name="error_message_email">Ingrese un email valido</string>
+    <string name="error_validacion_email_contrasenia">Ingrese la contraseña</string>
 </resources>

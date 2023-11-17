@@ -1,161 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollViewSignUp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.SignUpActivity">
 
-    <!--BG gradiente-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradiente"
-        android:alpha="0.99"/>
-
-    <!--BG imagen-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/estacionamiento"
-        android:alpha="0.5"/>
-
-    <!--CONTAINER LOGO-->
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="50dp"
-        android:gravity="center_horizontal">
+        android:background="@drawable/fondo_con_degradado">
 
-        <!--LOGO-->
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/logo"/>
-    </LinearLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/logo"/>
 
-    <!--CONTAINER FORMULARIO-->
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:cardCornerRadius="28dp"
-        android:layout_marginBottom="-23dp">
-
-        <!--CONTAINER INPUTS, BTN-->
-        <LinearLayout
+        <!--CONTENEDOR DE FORMULARIO-->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="450dp"
-            android:background="#19191A"
-            android:orientation="vertical"
-            android:padding="28dp">
-
-            <!--TITULOS-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0.9"
-                android:text="Crear Cuenta"
-                android:textColor="@color/white"
-                android:textSize="32dp"
-                android:textStyle="bold" />
-
-            <!--PADDING - ESPACIOS -->
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="30dp" />
-
-            <!--INPUT EMAIL -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="Email"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="15dp" />
-            <EditText
-                android:layout_width="348dp"
-                android:layout_height="27dp"
-                android:background="#F8F4FC"
-                android:hint="Introducir Email"
-                android:drawableEnd="@drawable/email_icon"
-                android:inputType="textEmailAddress" />
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="15dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="Contraeña"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="15dp" />
-            <EditText
-                android:layout_width="345dp"
-                android:layout_height="27dp"
-                android:background="#F8F4FC"
-                android:hint="Introducir Contraseña"
-                android:drawableEnd="@drawable/pass_icon"
-                android:inputType="textPassword" />
-            <!--PADDING - ESPACIOS -->
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="15dp" />
-
-            <!--INPUT CONTRASEÑA -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0.7"
-                android:text="Confirmar Contraseña"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="15dp" />
-
-            <EditText
-                android:layout_width="345dp"
-                android:layout_height="27dp"
-                android:background="#F8F4FC"
-                android:hint="Repetir Contraseña"
-                android:drawableEnd="@drawable/pass_icon"
-                android:inputType="textPassword" />
-
-            <!--PADDING - ESPACIOS -->
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
-
-            <!--BTN - INICIAR SESION -->
-            <com.google.android.material.button.MaterialButton
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="28dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="-23dp">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:backgroundTint="@color/violeta"
-                android:text="Crear Cuenta"
-                android:onClick="bntCrearCuenta"
-                android:id="@+id/crearCuenta"
-                android:textStyle="bold"
-                app:cornerRadius="10dp" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp"
+                android:background="#19191A">
 
-            <!--PADDING - ESPACIOS -->
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                <!--  EMAIL  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear Cuenta"
+                    android:textSize="40dp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"/>
 
-            <!-- REGISTRO - BTN -->
+                <!--  EMAIL  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese un email"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="8dp"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ejemplo@email.com"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#fff"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--  CONTRASEÑA  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese una contraseña"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="8dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutContrasenia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextContrasenia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="*********"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#fff"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+                <!--  CONFIRMAR CONTRASEÑA  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmar contraseña"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="8dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutContraseniaConfir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="35dp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInputEditTextContraseniaConfir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="*********"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#fff"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/appCompatIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:text="Crear cuenta"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_marginBottom="35dp"
+                    android:background="@drawable/btn_login_bg"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

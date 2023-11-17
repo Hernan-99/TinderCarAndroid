@@ -37,13 +37,13 @@
             android:label="Soporte">
         </activity>
 
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="Login">
+        </activity>
 
-        <activity android:name=".activities.LoginActivity"/>
         <activity android:name=".activities.SignUpActivity"/>
         <activity android:name=".activities.MainActivity"/>
-
-
-
     </application>
 
 </manifest>
