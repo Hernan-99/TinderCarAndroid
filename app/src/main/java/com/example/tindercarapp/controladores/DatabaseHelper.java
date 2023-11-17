@@ -127,8 +127,97 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void updateUser(Usuario usuario) {
         SQLiteDatabase db = this.getWritableDatabase();
 
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_USER_NOMBRE, usuario.getNombre_usuario());
+        values.put(COLUMN_USER_CORREO, usuario.getCorreo_usuario());
+        values.put(COLUMN_USER_PASSWORD, usuario.getContrasenia_usuario());
+
+        //updatin row
+        db.update (TABLE_USER, values, COLUMN_USER_ID + " = ?",
+                new String[]{String.valueOf(usuario.getId_usuario())});
+        db.close();
     }
 
+    //Este metodo se usa para borrar un usuario.
+
+    public void deleteUser(Usuario usuario) {
+        SQLiteDatabase db =this.getWritableDatabase();
+        //delete usuario por el id
+        db.delete(TABLE_USER, COLUMN_USER_ID + " = ?",
+                new String[]{String.valueOf(usuario.getId_usuario())});
+        db.close();
+    }
+    //metodo para saber si el usuario existe
+    public boolean checkUser(String email) {
+        //array de columnas a recuperar
+        String[] columns = {
+                COLUMN_USER_ID
+        };
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        //seleccion de criterio
+        String selection = COLUMN_USER_CORREO + " = ?";
+
+        //seleccion de argumento
+        String[] selectionArgs = {email};
+
+        //query tabla de usuario con la condicion
+        Cursor cursor = db.query(TABLE_USER,
+                columns,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null);
+        int cursorCount = cursor.getCount();
+        cursor.close();
+        db.close();
+
+        if (cursorCount > 0){
+            return true;
+        }
+        return false;
+    }
+    /**
+     * este metodo es para checkear si el usuario existe o no
+     *
+     * @param correo
+     * @param password
+     * @return true/false
+     */
+
+    public boolean checkUser(String email, String password) {
+
+        //array de columnas
+        String[] columns = {
+                COLUMN_USER_ID
+        };
+        SQLiteDatabase db = this.getReadableDatabase();
+        //criterio de seleccion
+        String selection = COLUMN_USER_CORREO + " = ?" + " AND "+ COLUMN_USER_PASSWORD + " = ?";
+
+        //seleccion de argumentos
+        String[] selectionArgs = {email, password};
+
+        //query para ver la condicion de usuarios
+        Cursor cursor = db.query(TABLE_USER,
+                columns,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null);
+
+        int cursorCount = cursor.getCount();
+
+        cursor.close();
+        db.close();
+        if (cursorCount > 0) {
+            return true;
+        }
+
+        return false;
+    }
 
 
 }
